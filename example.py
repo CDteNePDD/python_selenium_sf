@@ -7,8 +7,9 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 driver = webdriver.Chrome("E:\Python Project\python_selenium_sf\chromedriver")
-driver.get("https://google.com")
-driver.find_element(By.XPATH, "//input[@title=\"Поиск\"]").send_keys('Skillfactory' + Keys.RETURN)
-sleep(2)
-driver.save_screenshot('sf.png')
+driver.get("https://yandex.ru/")
+sleep(5)
+driver.find_element(By.XPATH, "//*[@id=\"0\"]/article/div[1]/div[1]/a").click()
+sleep(5)
+driver.save_screenshot('yandex_news.png')
 driver.quit()
